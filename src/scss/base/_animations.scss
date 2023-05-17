@@ -1,0 +1,41 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+#bar1,
+#bar2,
+#bar3 {
+  transition: all 250ms ease;
+}
+
+.navbar.open {
+  #bar2 {
+    opacity: 0;
+  }
+
+  #bar1 {
+    transform-origin: -1px 3px;
+    transform: rotate(45deg);
+  }
+
+  #bar3 {
+    transform: rotate(-45deg);
+    transform-origin: 1px 13px;
+  }
+}

@@ -1,0 +1,2 @@
+"use strict";var navbar=document.querySelector(".navbar"),navbarBtn=document.querySelector("#hamburger");function navbarBtnClick(){"true"===navbarBtn.getAttribute("aria-expanded")?(navbar.classList.remove("open"),navbarBtn.setAttribute("aria-expanded","false")):(navbar.classList.add("open"),navbarBtn.setAttribute("aria-expanded","true"))}navbarBtn.addEventListener("click",navbarBtnClick);
+//# sourceMappingURL=script.js.map

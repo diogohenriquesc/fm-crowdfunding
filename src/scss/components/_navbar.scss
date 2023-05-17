@@ -1,0 +1,111 @@
+@use "../abstracts/" as *;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: rem(32);
+
+  @include breakpoint(md) {
+    padding-block: rem(48);
+  }
+
+  &.open {
+    .navbar__menu {
+      display: block;
+      animation: fade-in 300ms forwards;
+
+      @include breakpoint(md) {
+        display: flex;
+      }
+    }
+
+    .navbar__overlay {
+      display: block;
+      animation: fade-in 250ms forwards;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__toggler {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: rem(88);
+    right: rem(24);
+    left: rem(24);
+    background-color: var(--clr-neutral-1);
+    border-radius: rem(8);
+
+    @include breakpoint(md) {
+      position: static;
+      background-color: inherit;
+      border-radius: none;
+      display: flex;
+      gap: rem(32);
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--clr-border);
+
+      @include breakpoint(md) {
+        border: none;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--clr-txt-1);
+    font-size: rem(18);
+    font-weight: 500;
+    display: block;
+    padding: rem(24);
+    position: relative;
+
+    @include breakpoint(md) {
+      color: var(--clr-neutral-1);
+      font-size: rem(13);
+      padding: 0;
+      display: inline-block;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      width: 0;
+      background-color: var(--clr-neutral-1);
+      transition: all 200ms linear;
+    }
+  }
+
+  &__overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, var(--clr-menu-bg-1) 0%, var(--clr-menu-bg-2) 100%);
+  }
+}

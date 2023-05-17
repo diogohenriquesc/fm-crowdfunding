@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.container {
+  width: min(100%, rem(1110));
+  margin-inline: auto;
+  padding-inline: rem(24);
+
+  @include breakpoint(xl) {
+    padding-inline: 0;
+  }
+}
