@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
@@ -16,16 +17,17 @@
 
   <title>Frontend Mentor | Crowdfunding product page</title>
 </head>
+
 <body>
   <header class="header">
-    <nav class="navbar container" role="navigation" aria-label="Main menu">
+    <nav class="navbar container container--header" role="navigation" aria-label="Main menu">
       <a class="havbar__brand" href="/">
         <img src="./assets/images/logo.svg" alt="Homepage">
       </a>
 
-      <button class="navbar__toggler" id="hamburger"
-       aria-expanded="false" aria-controls="main-menu" aria-label="Menu">
-        <svg aria-hidden="true"  width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="navbar__toggler" id="hamburger" aria-expanded="false" aria-controls="main-menu" aria-label="Menu">
+        <svg aria-hidden="true" width="16" height="15" viewBox="0 0 16 15" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <g id="hamburger" clip-path="url(#clip0_2_7)">
             <path id="bar3" d="M0 12H16V15H0V12Z" fill="white" />
             <rect id="bar1" width="16" height="3" fill="white" />
@@ -39,7 +41,7 @@
         </svg>
       </button>
 
-      <ul class="navbar__menu" id="main-menu" role="menubar">
+      <ul class="navbar__menu" id="main-menu" role="menubar" tabindex="1">
         <li class="navbar__item" role="menuitem">
           <a class="navbar__link" href="#">About</a>
         </li>
@@ -53,9 +55,37 @@
         </li>
       </ul>
 
-      <div class="navbar__overlay" aria-hidden="true" tabindex="-1"></div>
-    </nav>  
+      <div class="navbar__overlay" aria-hidden="true"></div>
+    </nav>
   </header>
 
+  <main>
+    <section class="hero">
+      <picture class="hero__img">
+        <source srcset="./assets/images/image-hero-desktop.jpg" media="(min-width: 45rem)">
+        <img src="./assets/images/image-hero-mobile.jpg" alt="A desktop using the Mastercraft Monitor Riser">
+      </picture>
+
+      <div class="hero__text container container--main">
+        <img class="hero__brand" src="./assets/images/logo-mastercraft.svg" alt="Mastercraft logo">
+        <h1 class="hero__title">Mastercraft Bamboo
+          Monitor Riser</h1>
+        <p class="hero__description">A beautifully handcrafted monitor stand to reduce neck and eye strain.</p>
+        <div class="hero__buttons">
+          <button class="hero__cta btn__cta btn__cta--l">Back this project</button>
+          <button class="hero__bookmark btn__bookmark" id="bookmark" data-bookmarked="false">
+            <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
+                <path fill="#B1B1B1" d="M23 19v18l5-5.058L33 37V19z" />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
 </body>
+
 </html>

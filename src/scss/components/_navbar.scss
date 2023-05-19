@@ -34,6 +34,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
+    z-index: 99;
 
     @include breakpoint(md) {
       display: none;
@@ -49,6 +50,7 @@
     left: rem(24);
     background-color: var(--clr-neutral-1);
     border-radius: rem(8);
+    z-index: 99;
 
     @include breakpoint(md) {
       position: static;
@@ -103,9 +105,11 @@
 
   &__overlay {
     display: none;
-    position: absolute;
+    position: fixed;
     inset: 0;
-    z-index: -1;
+    // z-index: -1;
+    pointer-events: none;
+    user-select: none;
     background: linear-gradient(180deg, var(--clr-menu-bg-1) 0%, var(--clr-menu-bg-2) 100%);
   }
 }

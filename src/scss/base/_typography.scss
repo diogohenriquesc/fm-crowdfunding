@@ -3,6 +3,7 @@
 
 h1, h2, h3 {
   color: var(--clr-txt-1);
+  font-weight: 700;
 }
 
 h1 {
@@ -10,8 +11,8 @@ h1 {
   line-height: get-line-height(rem(20), rem(24.46));
 
   @include breakpoint(xl) {
-    font-size: rem(20);
-    line-height: get-line-height(rem(20), rem(24.46));
+    font-size: rem(28);
+    line-height: get-line-height(rem(28), rem(32.24));
   }
 }
 

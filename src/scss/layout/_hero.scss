@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+.hero {
+  &__img {
+    max-width: rem(1440);
+    margin-inline: auto;
+  }
+
+  &__text {
+    position: relative;
+    background: var(--clr-neutral-1);
+    padding: rem(50) rem(24) rem(40);
+    text-align: center;
+    border-radius: rem(8);
+    margin-top: rem(-56);
+    border: 1px solid var(--clr-neutral-4);
+
+    @include breakpoint(md) {
+      padding: rem(56) rem(48) rem(48);
+      margin-top: rem(-92);
+    }
+  }
+
+  &__brand {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  &__title {
+    margin-bottom: rem(16);
+
+    @include breakpoint(md) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__description {
+    margin-bottom: rem(16);
+
+    @include breakpoint(md) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(9);
+  }
+}

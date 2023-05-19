@@ -3,7 +3,10 @@
   --clr-txt-2: hsla(0, 0%, 48%, 1);
   --clr-neutral-1: hsla(0, 0%, 100%, 1);
   --clr-neutral-2: hsla(0, 0%, 98%, 1);
-  --clr-neutral-3: rgba(0, 0, 0, 0.15);
+  --clr-neutral-3: hsla(0, 0%, 0%, 0.15)
+  --clr-neutral-4: hsla(0, 0%, 0%, 0.05);
+  --clr-neutral-5: hsla(0, 0%, 18%, .1);
+  --clr-neutral-6: hsla(0, 0%, 18%, .05);
   --clr-accent: hsla(176, 50%, 47%, 1);
   --clr-accent-dark: hsla(176, 72%, 28%, 1);
   --clr-accent-disable: hsla(0, 0%, 18%, 1);
@@ -12,6 +15,7 @@
   --clr-menu-bg-1: hsla(0, 0%, 0%, 1);
   --clr-menu-bg-2: hsla(0, 0%, 0%, 0);
   
+  --clr-btn-hover: hsla(0, 0%, 44%, 1);
 
   --ff-commissioner: Commissioner, sans-serif;
 }

@@ -1,0 +1,77 @@
+@use "../abstracts/" as *;
+
+.btn__cta {
+  background-color: var(--clr-accent);
+  border: none;
+  border-radius: rem(33.5);
+  color: var(--clr-neutral-1);  
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: get-line-height(rem(16), rem(19.57)); 
+  transition: background-color 250ms ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--clr-accent-dark);
+  }
+
+  &--l {
+    padding: rem(17) rem(40) rem(19);
+  }
+
+  &--m {
+    padding: rem(15) rem(33) rem(16);
+  }
+
+  &--s {
+    padding: rem(15) rem(23) rem(16);
+  }
+}
+
+.btn__bookmark {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg circle {
+    transition: all 250ms ease;
+  }
+
+  &:hover {
+    svg circle {
+      fill: var(--clr-btn-hover);
+    }
+  }
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    padding-right: rem(24);
+    background-color: var(--clr-neutral-6);
+    border-radius: rem(33.5);
+    color: var(--clr-txt-2);
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: get-line-height(rem(16), rem(19.57));
+
+    &::after {
+      content: "Bookmark";
+    }
+  }
+
+  &[data-bookmarked="true"] {
+    color: var(--clr-accent-dark);
+
+    svg circle {
+      fill: var(--clr-accent-dark);
+    }
+
+    @include breakpoint(md) {
+      &::after {
+        content: "Bookmarked";
+      }
+    }
+  }
+}
+
