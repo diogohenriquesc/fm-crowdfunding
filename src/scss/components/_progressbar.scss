@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.progressbar {
+  border: none;
+  border-radius: rem(33.5);
+  width: 100%;
+  height: rem(12);
+  background-color: var(--clr-neutral-6);
+  accent-color: var(--clr-accent);
+
+
+  &::-webkit-progress-bar {
+    background-color: var(--clr-neutral-6);
+    border-radius: rem(33.5);
+    accent-color: var(--clr-accent);
+  }
+
+  &::-moz-progress-bar {
+    background-color: var(--clr-accent);
+    border-radius: rem(33.5);
+  }
+
+  &::-webkit-progress-value {
+    background-color: var(--clr-accent);
+    border-radius: rem(33.5);
+  }
+}

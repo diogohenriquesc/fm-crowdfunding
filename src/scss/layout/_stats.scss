@@ -1,0 +1,73 @@
+@use "../abstracts/" as *;
+
+.stats {
+  border-radius: rem(8);
+  background-color: var(--clr-neutral-1);
+  padding: rem(32) rem(23) rem(40);
+  margin-block: rem(24);
+  border: 1px solid var(--clr-neutral-6);
+  text-align: center;
+
+  @include breakpoint(md) {
+    padding: rem(48);
+    text-align: left;
+  }
+  
+  &__wrapper {
+    @include breakpoint(md) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-of-type) {
+      margin-bottom: rem(49);
+
+      @include breakpoint(md) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:not(:last-of-type)::after {
+      content: "";
+      position: absolute;
+      bottom: rem(-24);
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(80);
+      height: rem(1);
+      background-color: var(--clr-txt-1);
+      opacity: 0.15;
+
+      @include breakpoint(md) {
+        bottom: auto;
+        left: auto;
+        right: rem(10);
+        top: rem(32);
+        transform: rotate(90deg);
+        width: rem(63);
+      }
+    }
+  }
+
+  &__value {
+    display: block;
+    color: var(--clr-txt-1);
+    font-size: rem(32);
+    line-height: get-line-height(rem(32), rem(39.14));
+    font-weight: 700;
+    margin-bottom: rem(9);
+  }
+
+  &__progressbar {
+    margin-top: rem(32);
+
+    @include breakpoint(md) {
+      margin-top: rem(37);
+    }
+  }
+
+}
