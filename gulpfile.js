@@ -33,6 +33,9 @@ function browserSyncServe(cb) {
 		notify: false,
 		scrollRestoreTechnique: 'cookie',
 		online: false,
+		ghostMode: {
+			scroll: true,
+		},
 	});
 	cb();
 }

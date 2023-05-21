@@ -4,10 +4,10 @@
   background-color: var(--clr-accent);
   border: none;
   border-radius: rem(33.5);
-  color: var(--clr-neutral-1);  
+  color: var(--clr-neutral-1);
   font-weight: 700;
   font-size: rem(16);
-  line-height: get-line-height(rem(16), rem(19.57)); 
+  line-height: get-line-height(rem(16), rem(19.57));
   transition: background-color 250ms ease;
   cursor: pointer;
 
@@ -26,15 +26,21 @@
   &--s {
     padding: rem(15) rem(23) rem(16);
   }
+
+  &[disabled] {
+    background-color: var(--clr-accent-disable);
+    cursor: not-allowed;
+  }
 }
 
 .btn__bookmark {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: all 300ms ease;
 
-  svg circle {
-    transition: all 250ms ease;
+  svg {
+    transition: all 300ms ease;
   }
 
   &:hover {
@@ -68,10 +74,16 @@
     }
 
     @include breakpoint(md) {
+      padding-right: rem(73);
+
+      svg {
+        transform: translateX(rem(138)) rotate(360deg);
+      }
+
       &::after {
         content: "Bookmarked";
+        margin-left: rem(-45);
       }
     }
   }
 }
-

@@ -21,7 +21,7 @@
 <body>
   <header class="header">
     <nav class="navbar container container--header" role="navigation" aria-label="Main menu">
-      <a class="havbar__brand" href="/">
+      <a class="navbar__brand" href="/">
         <img src="./assets/images/logo.svg" alt="Homepage">
       </a>
 
@@ -54,10 +54,11 @@
           <a class="navbar__link" href="#">Get Started</a>
         </li>
       </ul>
-
-      <div class="navbar__overlay" aria-hidden="true"></div>
     </nav>
   </header>
+
+  <div class="overlay overlay--hidden"></div>
+
 
   <main>
     <section class="hero">
@@ -109,6 +110,59 @@
 
       <progress class="stats__progressbar progressbar" max="100" value="89.01"></progress>
     </section>
+
+    <section class="about container container--main">
+      <h2 class="about__title">About this project</h2>
+      <p class="about__description">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates
+        your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve
+        your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
+      <p class="about__description">Featuring artisan craftsmanship, the simplicity of design creates extra desk space
+        below your computer to allow
+        notepads, pens, and USB sticks to be stored under the stand.</p>
+
+      <div class="rewards">
+        <div class="rewards__option">
+          <div class="rewards__option-heading">
+            <h3 class="rewards__title">Bambo Stand</h3>
+            <p class="rewards__price">Pledge $25 or more</p>
+          </div>
+          <p class="rewards__description">You get an ergonomic stand made of natural bamboo. You've helped us launch our
+            promotional campaign, and you’ll be added to a special Backer member list.</p>
+          <div class="rewards__option-footer">
+            <p class="rewards__count"><span>101</span> left</p>
+            <button class="rewards__button btn__cta btn__cta--m">Select Reward</button>
+          </div>
+        </div>
+
+        <div class="rewards__option">
+          <div class="rewards__option-heading">
+            <h3 class="rewards__title">Black Edition Stand</h3>
+            <p class="rewards__price">Pledge $75 or more</p>
+          </div>
+          <p class="rewards__description">You get a Black Special Edition computer stand and a personal thank you.
+            You’ll be added to our Backer member list. Shipping is included.</p>
+          <div class="rewards__option-footer">
+            <p class="rewards__count"><span>64</span> left</p>
+            <button class="rewards__button btn__cta btn__cta--m">Select Reward</button>
+          </div>
+        </div>
+
+        <div class="rewards__option" data-disabled="true">
+          <div class="rewards__option-heading">
+            <h3 class="rewards__title">Mahogany Special Edition</h3>
+            <p class="rewards__price">Pledge $200 or more</p>
+          </div>
+          <p class="rewards__description">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal
+            thank you. You’ll be added to our Backer
+            member list. Shipping is included.</p>
+          <div class="rewards__option-footer">
+            <p class="rewards__count"><span>0</span> left</p>
+            <button class="rewards__button btn__cta btn__cta--m" disabled>Out of stock</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
 </body>
