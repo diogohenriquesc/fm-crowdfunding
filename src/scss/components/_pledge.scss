@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.pledge {
+  border-radius: rem(8);
+  border: 1px solid var(--clr-neutral-6);
+  padding: rem(36) rem(24) rem(32);
+
+  &__heading {
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      width: rem(24);
+      height: rem(24);
+      border: 1px solid var(--clr-neutral-3);
+      border-radius: 50%;
+      background-color: var(--clr-accent);
+      border: rem(6) solid var(--clr-neutral-1);
+      box-shadow: 0 0 0 1px var(--clr-neutral-3);
+    }
+  }
+}

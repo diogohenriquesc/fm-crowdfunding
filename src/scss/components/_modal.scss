@@ -1,0 +1,23 @@
+@use '../abstracts/' as *;
+
+.modal {
+  padding: rem(32) rem(24);
+  border: 1px solid var(--clr-neutral-6);
+  border-radius: rem(8);
+  background-color: var(--clr-neutral-1);
+
+  @include breakpoint(md) {
+    padding: rem(32) rem(48) rem(48);
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__description {
+    margin-block: rem(24);
+  }
+
+}
